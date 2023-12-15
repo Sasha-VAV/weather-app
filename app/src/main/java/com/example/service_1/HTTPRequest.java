@@ -20,8 +20,8 @@ import java.util.Scanner;
 import javax.net.ssl.HttpsURLConnection;
 
 public class HTTPRequest implements Runnable{
-    public static String api = "https://api.openweathermap.org/data/2.5/weather?lat=37.27&lon=-107.88&appid=14357d947032c5d34b3ff761ddad9e84&units=metric";
-    public static final String APIKEY = "ca6188f9ad6b3fd6e07ca0fcef77a139";
+    public static String api = "https://api.openweathermap.org/data/2.5/weather?lat=37.27&lon=-107.88&appid={your api}&units=metric";
+    public static final String APIKEY = "your api";
     public static String CITY = "Denver";
     //public static Exception e;
     public static boolean ex=false;
