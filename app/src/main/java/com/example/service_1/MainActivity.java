@@ -104,7 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 String response = intent.getStringExtra(GisService.INFO);
                 JSONObject start = new JSONObject(response);
                 JSONObject main = start.getJSONObject("main");
-                String temp = "temperature: " + main.getString("temp") +" C";
+                Double tempf= Double.parseDouble(main.getString("temp"))*1.8+32;
+                String temp = main.getString("temp") +" C\n"+Math.ceil(tempf*100)/100+" F";
                 TextView t1= findViewById(R.id.temp);
                 t1.setText(temp);
                 JSONArray weather = start.getJSONArray("weather");
