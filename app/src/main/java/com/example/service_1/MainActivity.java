@@ -105,9 +105,12 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject start = new JSONObject(response);
                 JSONObject main = start.getJSONObject("main");
                 Double tempf= Double.parseDouble(main.getString("temp"))*1.8+32;
-                String temp = main.getString("temp") +" C\n"+Math.ceil(tempf*100)/100+" F";
+                String temp = main.getString("temp") +" C";
+                String tempsf= Math.ceil(tempf*100)/100+" F";
                 TextView t1= findViewById(R.id.temp);
                 t1.setText(temp);
+                TextView t6= findViewById(R.id.tempf);
+                t6.setText(tempsf);
                 JSONArray weather = start.getJSONArray("weather");
                 Log.d("Res1","1");
                 JSONObject wind = start.getJSONObject("wind");
